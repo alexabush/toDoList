@@ -4,9 +4,9 @@ body {
 
 #wrapper {
   margin: auto;
-  max-width: 500px;
+  max-width: 400px;
   background-color: #FF6666;
-  padding: 30px;
+  padding: 50px;
   color: white;
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
@@ -18,12 +18,12 @@ header {
 
 h1 {
 
-  font-size: 1.8rem;
+  font-size: 2.6em;
   letter-spacing: 0.05em;
 }
 
 h2 {
-  font-size: 0.8rem;
+  font-size: .8em;
 }
 
 
@@ -35,9 +35,9 @@ main {}
   font-size: .6em;
 }
 
-#formWrapper {}
+#form-wrapper {}
 
-#newItem {
+#new-item {
   font-size: 1em;
 
   input {
@@ -48,5 +48,13 @@ main {}
     border: solid 1px white;
     padding: 5px;
     font-size: .5em;
+  }
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  p {
+    display: inline;
   }
 }
