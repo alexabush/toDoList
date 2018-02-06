@@ -1,4 +1,35 @@
+body {
+  margin: auto; }
+
 #wrapper {
-  background-color: FF6666; }
+  margin: auto;
+  max-width: 500px;
+  background-color: #FF6666;
+  padding: 30px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px; }
+
+header {
+  border-bottom: 1px solid white; }
+
+h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.05em; }
+
+h2 {
+  font-size: 0.8rem; }
+
+#toggle {
+  font-size: .6em; }
+
+#newItem {
+  font-size: 1em; }
+  #newItem input {
+    height: 20px; }
+  #newItem button {
+    border: solid 1px white;
+    padding: 5px;
+    font-size: .5em; }
 
 /*# sourceMappingURL=styles.css.map */
