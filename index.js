@@ -18,16 +18,18 @@ form.addEventListener('submit', function(e) {
 })
 
 function addToList(text) {
+  const section = document.createElement('section');
   const div = document.createElement('div');
   const p = document.createElement('p');
   const btn = document.createElement('button');
-  div.classList.add('list-item');
+  section.classList.add('list-item');
   p.innerText = `${text}`;
   btn.innerText = 'X';
   btn.classList.add('remove-button');
   div.appendChild(p);
   div.appendChild(btn);
-  list.appendChild(div);
+  section.appendChild(div);
+  list.appendChild(section);
 
 }
 
