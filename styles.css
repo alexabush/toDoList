@@ -5,6 +5,9 @@ body {
 body {
   margin: auto; }
 
+button {
+  cursor: pointer; }
+
 #wrapper {
   margin: auto;
   max-width: 400px;
@@ -32,11 +35,13 @@ h2 {
 #new-item {
   font-size: 1em; }
   #new-item input {
-    height: 20px; }
+    height: 30px; }
   #new-item button {
     border: solid 1px white;
-    padding: 5px;
-    font-size: .5em; }
+    padding: 11px;
+    font-size: .5em;
+    background-color: transparent;
+    color: white; }
 
 .list-item {
   margin-top: 5px;

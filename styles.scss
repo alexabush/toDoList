@@ -1,70 +1,81 @@
-  html,
-  body {
-    background: #f7f1f1;
+html,
+body {
+  background: #f7f1f1;
+}
+
+body {
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+#wrapper {
+  margin: auto;
+  max-width: 400px;
+  background-color: #FF6666;
+  padding: 40px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+}
+
+header {
+  /*use rbga to reduce opacity*/
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.6em;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: .8em;
+}
+
+
+main {}
+
+#list {}
+
+#toggle {
+  font-size: .6em;
+}
+
+#form-wrapper {}
+
+#new-item {
+  font-size: 1em;
+
+  input {
+    height: 30px;
   }
 
-  body {
-    margin: auto;
-  }
-
-  #wrapper {
-    margin: auto;
-    max-width: 400px;
-    background-color: #FF6666;
-    padding: 40px;
+  button {
+    border: solid 1px white;
+    padding: 11px;
+    font-size: .5em;
+    background-color: transparent;
     color: white;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
   }
+}
 
-  header {
-    /*use rbga to reduce opacity*/
-    border-bottom: 1px solid rgba(255, 255, 255, .5);
-  }
-
-  h1 {
-    margin: 0;
-    font-size: 2.6em;
-    letter-spacing: 0.05em;
-  }
-
-  h2 {
-    font-size: .8em;
-  }
-
-
-  main {}
-
-  #list {}
-
-  #toggle {
-    font-size: .6em;
-  }
-
-  #form-wrapper {}
-
-  #new-item {
-    font-size: 1em;
-
-    input {
-      height: 20px;
-    }
-
-    button {
-      border: solid 1px white;
-      padding: 5px;
-      font-size: .5em;
+.list-item {
+  margin-top: 5px;
+  background-color: rgba(256, 102, 102, .3);
+  div {
+    display: flex;
+    justify-content: space-between;
+    p {
+      display: inline;
     }
   }
+}
 
-  .list-item {
-    margin-top: 5px;
-    background-color: rgba(256, 102, 102, .3);
-    div {
-      display: flex;
-      justify-content: space-between;
-      p {
-        display: inline;
-      }
-    }
-  }
+
+
+
+
