@@ -52,4 +52,7 @@ h2 {
     .list-item div p {
       display: inline; }
 
+#new-item button:hover {
+  background-color: #FF5E5E; }
+
 /*# sourceMappingURL=styles.css.map */
