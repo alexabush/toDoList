@@ -12,20 +12,33 @@ list.addEventListener('click', function(e) {
   if (e.target.type === 'checkbox') toggleCheckBox(e);
 });
 
-function toggleCheckBox(e) {
-  //this seems like poor design, but it works
-  e.target.parentElement.parentElement.parentElement.classList.toggle('checked');
-  console.log('checked');
-}
-
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   addToList(input.value);
+  arr.push(generateItemData(input.value));
   input.value = '';
 });
 
+const arr = [
+  
+];
+
+function generateItemData(text, isChecked = false) {
+  return {
+    text,
+    isChecked
+  }
+}
+
+function sortList() {
+  arr.forEach(entry => {
+    addToList(entry);
+  });
+}
+
+
 function addToList(text) {
-  const section = document.createElement('section');
+  const li = document.createElement('section');
   const div = document.createElement('div');
   const checkboxBtnDiv = document.createElement('div');
   const checkboxDiv = document.createElement('div');
@@ -34,7 +47,7 @@ function addToList(text) {
   const btn = document.createElement('button');
 
   checkbox.setAttribute('type', 'checkbox');
-  section.classList.add('list-item');
+  li.classList.add('list-item');
   p.innerText = `${text}`;
   btn.innerText = 'X';
   btn.classList.add('remove-button');
@@ -44,8 +57,13 @@ function addToList(text) {
   checkboxBtnDiv.appendChild(btn);
   div.appendChild(p);
   div.appendChild(checkboxBtnDiv);
-  section.appendChild(div);
-  list.appendChild(section);
+  li.appendChild(div);
+  list.appendChild(li);
+}
+
+function toggleCheckBox(e) {
+  //this seems like poor design, but it works
+  e.target.parentElement.parentElement.parentElement.classList.toggle('checked');
 }
 
 function removeFromList(element) {

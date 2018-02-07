@@ -39,7 +39,10 @@ h2 {
 
 main {}
 
-#list {}
+#list {
+  margin: 0;
+  padding: 10px 0 5px 0;
+}
 
 #toggle {
   font-size: .6em;
@@ -73,27 +76,39 @@ main {}
       display: inline;
     }
     div {
+      // padding: 20px 0;
       width: 50px;
       display: flex;
       justify-content: space-between;
       position: relative;
 
+      button {
+        border: none;
+        // border: solid 1px white;
+        // margin: 0;
+        // padding: 0;
+        font-size: 1.2rem;
+        background-color: transparent;
+        color: white;
+      }
+
       input[type='checkbox'] {
         position: absolute;
         top: 20px;
-        right: 10px;
-        // &:hover {
+        right: 10px; // &:hover {
         //   border: 1px solid blue;
         // }
-        transform: scale(2.25);
+        transform: scale(2);
       }
     }
   }
 }
 
 .checked {
-  background-color: blue;
-  color: red;
+  p {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
 }
 
 #new-item button:hover {

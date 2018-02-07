@@ -29,6 +29,10 @@ h1 {
 h2 {
   font-size: .8em; }
 
+#list {
+  margin: 0;
+  padding: 10px 0 5px 0; }
+
 #toggle {
   font-size: .6em; }
 
@@ -56,15 +60,20 @@ h2 {
       display: flex;
       justify-content: space-between;
       position: relative; }
+      .list-item div div button {
+        border: none;
+        font-size: 1.2rem;
+        background-color: transparent;
+        color: white; }
       .list-item div div input[type='checkbox'] {
         position: absolute;
         top: 20px;
         right: 10px;
-        transform: scale(2.25); }
+        transform: scale(2); }
 
-.checked {
-  background-color: blue;
-  color: red; }
+.checked p {
+  text-decoration: line-through;
+  opacity: 0.5; }
 
 #new-item button:hover {
   background-color: #FF5E5E; }
