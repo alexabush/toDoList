@@ -11,6 +11,6 @@ app.get("/", function(request, response) {
 
 app.listen(3000, function() {
   console.log(
-    "The server has started on port 3000. Head to localhost:3000 in the browser and see what's there!"
+    "The server is running on port 3000."
   );
 });

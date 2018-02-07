@@ -51,6 +51,14 @@ h2 {
     justify-content: space-between; }
     .list-item div p {
       display: inline; }
+    .list-item div div {
+      width: 50px;
+      display: flex;
+      justify-content: space-between; }
+      .list-item div div div:hover {
+        border: 1px solid blue; }
+      .list-item div div div input[type='checkbox'] {
+        transform: scale(2.25); }
 
 #new-item button:hover {
   background-color: #FF5E5E; }

@@ -15,22 +15,28 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
   addToList(input.value);
   input.value = '';
-})
+});
 
 function addToList(text) {
   const section = document.createElement('section');
   const div = document.createElement('div');
+  const checkboxBtnDiv = document.createElement('div');
+  const checkboxDiv = document.createElement('div');
   const p = document.createElement('p');
+  const checkbox = document.createElement('input');
   const btn = document.createElement('button');
+  checkbox.setAttribute('type', 'checkbox');
   section.classList.add('list-item');
   p.innerText = `${text}`;
   btn.innerText = 'X';
   btn.classList.add('remove-button');
+  checkboxDiv.appendChild(checkbox);
+  checkboxBtnDiv.appendChild(checkboxDiv);
+  checkboxBtnDiv.appendChild(btn);
   div.appendChild(p);
-  div.appendChild(btn);
+  div.appendChild(checkboxBtnDiv);
   section.appendChild(div);
   list.appendChild(section);
-
 }
 
 function removeFromList(element) {
