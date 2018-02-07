@@ -49,5 +49,5 @@ function addToList(text) {
 }
 
 function removeFromList(element) {
-  element.target.parentElement.remove();
+  element.target.parentElement.parentElement.remove();
 }
