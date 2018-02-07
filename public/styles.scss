@@ -76,21 +76,25 @@ main {}
       width: 50px;
       display: flex;
       justify-content: space-between;
+      position: relative;
 
-      div {
-        &:hover {
-          border: 1px solid blue;
-        }
-        
-        input[type='checkbox'] {
-          transform: scale(2.25);
-        }
+      input[type='checkbox'] {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        // &:hover {
+        //   border: 1px solid blue;
+        // }
+        transform: scale(2.25);
       }
     }
   }
 }
 
-
+.checked {
+  background-color: blue;
+  color: red;
+}
 
 #new-item button:hover {
   background-color: #FF5E5E;

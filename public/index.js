@@ -9,7 +9,14 @@ addToList('new list item');
 
 list.addEventListener('click', function(e) {
   if (e.target.classList.contains('remove-button')) removeFromList(e);
+  if (e.target.type === 'checkbox') toggleCheckBox(e);
 });
+
+function toggleCheckBox(e) {
+  //this seems like poor design, but it works
+  e.target.parentElement.parentElement.parentElement.classList.toggle('checked');
+  console.log('checked');
+}
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
@@ -25,11 +32,13 @@ function addToList(text) {
   const p = document.createElement('p');
   const checkbox = document.createElement('input');
   const btn = document.createElement('button');
+
   checkbox.setAttribute('type', 'checkbox');
   section.classList.add('list-item');
   p.innerText = `${text}`;
   btn.innerText = 'X';
   btn.classList.add('remove-button');
+
   checkboxDiv.appendChild(checkbox);
   checkboxBtnDiv.appendChild(checkboxDiv);
   checkboxBtnDiv.appendChild(btn);
