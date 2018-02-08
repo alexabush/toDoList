@@ -7,12 +7,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const input = document.getElementsByTagName('input')[0];
   const toggleBtn = document.querySelector('#toggle button');
   const arr = [];
+  let isToggled = false;
 
   /*
         EVENT LISTENERS
   */
 
-  toggleBtn.addEventListener('click', sortList);
+  toggleBtn.addEventListener('click', function() {
+    if (isToggled) isToggled = false;
+    else if (!isToggled) isToggled = true;
+    sortList();
+  });
 
   list.addEventListener('click', function(e) {
     if (e.target.classList.contains('remove-button')) removeFromList(e);
@@ -34,9 +39,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   function sortList() {
     emptyElement(list);
+    if (isToggled) populateToggledList();
+    else populateUntoggledList();
+  }
+
+  function populateToggledList() {
     arr.filter(data => data.isChecked === false).map(entry => addToList(entry));
     arr.filter(data => data.isChecked === true).map(entry => addToList(entry));
   }
+
+  function populateUntoggledList() { arr.map(entry => addToList(entry)); }
 
   function removeFromList(e) {
     arr.forEach((data, i) => {
@@ -55,8 +67,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const btn = document.createElement('button');
 
     div.setAttribute('id', data.id);
-    if (data.isChecked) div.classList.add('checked')
     checkbox.setAttribute('type', 'checkbox');
+    if (data.isChecked) {
+      div.classList.add('checked');
+      checkbox.checked = true;
+    }
     li.classList.add('list-item');
     p.innerText = `${data.text}`;
     btn.innerText = 'X';
