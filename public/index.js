@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   list.addEventListener('click', function(e) {
     if (e.target.classList.contains('remove-button')) removeFromList(e);
-    if (e.target.type === 'checkbox') toggleCheckBox(e);
+    if (e.target.type === 'checkbox') {
+      toggleCheckBox(e);
+      sortList();
+    }
   });
 
   form.addEventListener('submit', function(e) {
