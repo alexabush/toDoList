@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/alexabush/toDoList/issues"
   },
-  "homepage": "https://github.com/alexabush/toDoList#readme",
+  "homepage": "https://github.com/alexabush/toDoList",
   "dependencies": {
     "express": "^4.16.2"
   }
