@@ -29,8 +29,14 @@ h1 {
 h2 {
   font-size: .8em; }
 
+#list {
+  margin: 0;
+  padding: 10px 0 5px 0; }
+
 #toggle {
   font-size: .6em; }
+  #toggle p {
+    display: inline; }
 
 #new-item {
   font-size: 1em; }
@@ -51,8 +57,34 @@ h2 {
     justify-content: space-between; }
     .list-item div p {
       display: inline; }
+    .list-item div div {
+      width: 50px;
+      display: flex;
+      justify-content: space-between;
+      position: relative; }
+      .list-item div div button {
+        border: none;
+        font-size: 1.2rem;
+        background-color: transparent;
+        color: white; }
+      .list-item div div input[type='checkbox'] {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        transform: scale(2); }
+
+.checked p {
+  text-decoration: line-through;
+  opacity: 0.5; }
 
 #new-item button:hover {
   background-color: #FF5E5E; }
+
+#toggleBtn {
+  padding: 5px;
+  color: red;
+  border-radius: 15px;
+  width: 40px;
+  border: none; }
 
 /*# sourceMappingURL=styles.css.map */
